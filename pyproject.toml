@@ -1,0 +1,47 @@
+[project]
+name = "rfc9839"
+version = "0.0.1"
+description = "Python library to check for problematic Unicode code points."
+keywords = [
+    "unicode",
+    "rfc9839",
+    "surrogates",
+    "control codes",
+    "noncharacters",
+    "unicode scalars",
+    "xml characters",
+    "unicode assignables",
+    "security",
+]
+authors = [{ name = "Wu Tingfeng", email = "wutingfeng@outlook.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+license = "GPL-3.0"
+license-files = ["LICEN[CS]E*"]
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "pytest-xdist>=3.8.0",
+    "ruff>=0.12.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/elliotwutingfeng/rfc9839"
+Issues = "https://github.com/elliotwutingfeng/rfc9839/issues"
+
+[build-system]
+requires = ["uv_build >= 0.8.15, <0.9.0"]
+build-backend = "uv_build"

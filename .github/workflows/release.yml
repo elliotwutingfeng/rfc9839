@@ -1,0 +1,48 @@
+name: Publish to pypi.org
+
+on:
+    push:
+        tags:
+            - "v[0-9]+.[0-9]+.[0-9]+*"
+
+jobs:
+    build:
+        name: build release
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo content
+              uses: actions/checkout@v5
+
+            - name: Install uv
+              uses: astral-sh/setup-uv@v6
+              with:
+                  version: "latest"
+
+            - uses: actions/setup-python@v5
+              with:
+                  python-version-file: "pyproject.toml"
+
+            - name: Build distribution
+              run: make build
+
+            - name: Upload distribution artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: dist-artifacts
+                  path: dist/
+    pypi-publish:
+        name: upload release to PyPI
+        needs: build
+        runs-on: ubuntu-latest
+        environment: pypi
+        permissions:
+            # IMPORTANT: this permission is mandatory for Trusted Publishing
+            id-token: write
+        steps:
+            - name: Download distribution artifacts
+              uses: actions/download-artifact@v5
+              with:
+                  name: dist-artifacts
+                  path: dist/
+            - name: Publish package to PyPI
+              uses: pypa/gh-action-pypi-publish@release/v1

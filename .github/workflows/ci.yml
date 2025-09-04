@@ -1,0 +1,56 @@
+name: ci
+permissions:
+    contents: read
+    pull-requests: write
+
+on: [push, pull_request, workflow_dispatch]
+jobs:
+    format-markdown:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo content
+              uses: actions/checkout@v5
+
+            - name: Markdown format check
+              run: |
+                  npm install -g markdownlint-cli
+                  make markdown_lint
+                  git add -A
+                  git diff --cached --exit-code
+    test-and-coverage:
+        strategy:
+            matrix:
+                os: [macos-latest, windows-latest, ubuntu-latest]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: checkout repo content
+              uses: actions/checkout@v5
+
+            - name: Install uv
+              uses: astral-sh/setup-uv@v6
+              with:
+                  version: "latest"
+
+            - uses: actions/setup-python@v5
+              with:
+                  python-version-file: "pyproject.toml"
+
+            - name: Check lock file consistency
+              run: |
+                  uv lock --check
+
+            - name: Install the project
+              run: |
+                  make install
+
+            - name: Test
+              run: |
+                  make test
+
+            - name: Build distribution
+              run: |
+                  make build
+
+            - name: Coveralls
+              if: matrix.os == 'ubuntu-latest'
+              uses: coverallsapp/github-action@v2
