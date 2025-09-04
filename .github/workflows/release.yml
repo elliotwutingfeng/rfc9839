@@ -9,6 +9,8 @@ jobs:
     build:
         name: build release
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
         steps:
             - name: checkout repo content
               uses: actions/checkout@v5
