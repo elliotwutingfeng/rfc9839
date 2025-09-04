@@ -20,10 +20,6 @@ jobs:
               with:
                   version: "latest"
 
-            - uses: actions/setup-python@v6
-              with:
-                  python-version-file: "pyproject.toml"
-
             - name: Build distribution
               run: make build
 

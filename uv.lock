@@ -215,7 +215,7 @@ wheels = [
 
 [[package]]
 name = "rfc9839"
-version = "0.0.1"
+version = "0.0.2"
 source = { editable = "." }
 
 [package.dev-dependencies]

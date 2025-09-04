@@ -1,6 +1,6 @@
 [project]
 name = "rfc9839"
-version = "0.0.1"
+version = "0.0.2"
 description = "Python library to check for problematic Unicode code points."
 keywords = [
     "unicode",
@@ -26,7 +26,7 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
 ]
-license = "GPL-3.0"
+license = "MIT"
 license-files = ["LICEN[CS]E*"]
 dependencies = []
 

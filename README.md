@@ -2,7 +2,7 @@
 
 [![PyPI - Version](https://img.shields.io/pypi/v/rfc9839?style=for-the-badge)](https://pypi.org/project/rfc9839)
 [![Coveralls](https://img.shields.io/coverallsCoverage/github/elliotwutingfeng/rfc9839?logo=coveralls&style=for-the-badge)](https://coveralls.io/github/elliotwutingfeng/rfc9839?branch=main)
-[![License](https://img.shields.io/badge/LICENSE-GPL--3.0-GREEN?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/LICENSE-MIT-GREEN?style=for-the-badge)](LICENSE)
 
 Python library to check for problematic Unicode code points.
 
