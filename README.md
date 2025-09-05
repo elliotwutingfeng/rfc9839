@@ -15,13 +15,13 @@ Based on the Unicode code-point subsets specified in [RFC9839](https://www.rfc-e
 ```python
 from rfc9839 import unicode_scalar, xml_character, unicode_assignable
 
-code_point = 0xFDDA # ARABIC LIGATURE SAD WITH MEEM WITH ALEF MAKSURA FINAL FORM
+code_point = 0xFDDA  # ARABIC LIGATURE SAD WITH MEEM WITH ALEF MAKSURA FINAL FORM
 
-print(unicode_scalar.is_valid_code_point(code_point)) # True
-print(xml_character.is_valid_code_point(code_point)) # True
-print(unicode_assignable.is_valid_code_point(code_point)) # False
+print(unicode_scalar.is_valid_code_point(code_point))  # True
+print(xml_character.is_valid_code_point(code_point))  # True
+print(unicode_assignable.is_valid_code_point(code_point))  # False
 
 
-print(unicode_assignable.is_valid_string(chr(code_point))) # False
-print(xml_character.is_valid_utf8(chr(code_point).encode("utf-8"))) # True
+print(unicode_assignable.is_valid_string(chr(code_point)))  # False
+print(xml_character.is_valid_utf8(chr(code_point).encode("utf-8")))  # True
 ```
