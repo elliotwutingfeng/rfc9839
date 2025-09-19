@@ -4,7 +4,7 @@ This application uses code from other open-source projects. The copyright statem
 
 ## rfc9839 (Go)
 
-Although rfc9839 (Go) is under GPL-3.0, this Python library [can](https://github.com/timbray/rfc9839/issues/14) be licensed under [MIT](LICENSE) as it is based off the ABNF code ranges in [RFC 9839](https://www.rfc-editor.org/rfc/rfc9839.html).
+Although rfc9839 (Go) is under GPL-3.0, this Python library [can](https://github.com/timbray/rfc9839/issues/14) be licensed under [MIT](./LICENSE) as it is based off the ABNF code ranges in [RFC 9839](https://www.rfc-editor.org/rfc/rfc9839.html).
 
 Source: <https://github.com/timbray/rfc9839>
 
