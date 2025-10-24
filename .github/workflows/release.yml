@@ -24,7 +24,7 @@ jobs:
               run: make build
 
             - name: Upload distribution artifacts
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v5
               with:
                   name: dist-artifacts
                   path: dist/
@@ -38,7 +38,7 @@ jobs:
             id-token: write
         steps:
             - name: Download distribution artifacts
-              uses: actions/download-artifact@v5
+              uses: actions/download-artifact@v6
               with:
                   name: dist-artifacts
                   path: dist/
