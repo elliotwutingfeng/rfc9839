@@ -276,4 +276,4 @@ def test_wrong_input_type(validator: Subset, method: str, bad_input: typing.Any)
 
 def test_invalid_pairs():
     with pytest.raises(TypeError):
-        Subset(None)
+        Subset(None)  # type: ignore

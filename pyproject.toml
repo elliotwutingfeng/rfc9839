@@ -33,11 +33,11 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "pre-commit>=4.3.0",
-    "pytest>=8.4.2",
-    "pytest-cov>=7.0.0",
-    "pytest-xdist>=3.8.0",
-    "ruff>=0.14.10",
+    "pre-commit==4.3.0",
+    "pytest==8.4.2",
+    "pytest-cov==7.0.0",
+    "pytest-xdist==3.8.0",
+    "ruff==0.14.10",
 ]
 
 [project.urls]
@@ -45,5 +45,5 @@ Homepage = "https://github.com/elliotwutingfeng/rfc9839"
 Issues = "https://github.com/elliotwutingfeng/rfc9839/issues"
 
 [build-system]
-requires = ["uv_build >=0.9.18"]
+requires = ["uv_build >=0.9.21"]
 build-backend = "uv_build"
