@@ -1,6 +1,6 @@
 repos:
     - repo: https://github.com/tsvikas/sync-with-uv
-      rev: v0.1.0
+      rev: v0.5.0
       hooks:
           - id: sync-with-uv
             always_run: true
