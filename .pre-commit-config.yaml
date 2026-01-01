@@ -1,26 +1,26 @@
 repos:
-- repo: https://github.com/tsvikas/sync-with-uv
-  rev: v0.1.0
-  hooks:
-    - id: sync-with-uv
-      always_run: true
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
-    hooks:
-    -   id: check-yaml
-        always_run: true
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.14.10
-  hooks:
-    - id: ruff-check
-      always_run: true
-    - id: ruff-format
-      always_run: true
-- repo: https://github.com/facebook/pyrefly-pre-commit
-  rev: 0.46.3
-  hooks:
-    - id: pyrefly-check
-      always_run: true
-      pass_filenames: false
-      additional_dependencies:
-        - pytest==8.4.2
+    - repo: https://github.com/tsvikas/sync-with-uv
+      rev: v0.1.0
+      hooks:
+          - id: sync-with-uv
+            always_run: true
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          - id: check-yaml
+            always_run: true
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.14.10
+      hooks:
+          - id: ruff-check
+            always_run: true
+          - id: ruff-format
+            always_run: true
+    - repo: https://github.com/facebook/pyrefly-pre-commit
+      rev: 0.46.3
+      hooks:
+          - id: pyrefly-check
+            always_run: true
+            pass_filenames: false
+            additional_dependencies:
+                - pytest==8.4.2
