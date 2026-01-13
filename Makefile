@@ -11,7 +11,11 @@ ruff_format:
 
 install:
 	uv sync --locked --all-extras --dev
+
+precommit_install:
 	uv run pre-commit install
+
+install_all: install precommit_install
 
 build:
 	uv build --no-sources
