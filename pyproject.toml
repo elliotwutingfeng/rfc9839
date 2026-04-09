@@ -37,7 +37,7 @@ dev = [
     "pytest==9.0.3; python_version >= '3.14'",
     "pytest-cov==7.1.0",
     "pytest-xdist==3.8.0",
-    "ruff==0.15.9",
+    "ruff==0.15.10",
 ]
 
 [project.urls]
