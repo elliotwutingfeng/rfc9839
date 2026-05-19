@@ -37,7 +37,7 @@ dev = [
     "pytest==9.0.3; python_version >= '3.14'",
     "pytest-cov==7.1.0",
     "pytest-xdist==3.8.0",
-    "ruff==0.15.13",
+    "ruff==0.15.12",
 ]
 
 [project.urls]
@@ -45,5 +45,8 @@ Homepage = "https://github.com/elliotwutingfeng/rfc9839"
 Issues = "https://github.com/elliotwutingfeng/rfc9839/issues"
 
 [build-system]
-requires = ["uv_build >=0.9.24"]
+requires = ["uv_build >=0.11.15, <0.12"]
 build-backend = "uv_build"
+
+[tool.uv]
+exclude-newer = "21 days"
