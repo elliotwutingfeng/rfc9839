@@ -45,7 +45,7 @@ Homepage = "https://github.com/elliotwutingfeng/rfc9839"
 Issues = "https://github.com/elliotwutingfeng/rfc9839/issues"
 
 [build-system]
-requires = ["uv_build >=0.11.15, <0.12"]
+requires = ["uv_build >=0.12, <0.13"]
 build-backend = "uv_build"
 
 [tool.uv]
