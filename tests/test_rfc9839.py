@@ -1,7 +1,9 @@
 import pathlib
-import pytest
 import typing
-from rfc9839 import unicode_scalar, xml_character, unicode_assignable, Subset
+
+import pytest
+
+from rfc9839 import Subset, unicode_assignable, unicode_scalar, xml_character
 
 TEST_DIR = pathlib.Path(__file__).parent
 

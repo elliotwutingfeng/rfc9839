@@ -83,6 +83,5 @@ unicode_assignable = Subset(
         (0xE0000, 0xEFFFD),
         (0xF0000, 0xFFFFD),
         (0x100000, 0x10FFFD),
-        #
     )
 )
