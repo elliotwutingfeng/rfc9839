@@ -46,8 +46,8 @@ Homepage = "https://github.com/elliotwutingfeng/rfc9839"
 Issues = "https://github.com/elliotwutingfeng/rfc9839/issues"
 
 [build-system]
-requires = ["uv_build >=0.12, <0.14"]
-build-backend = "uv_build"
+requires = ["flit_core >=4,<5"]
+build-backend = "flit_core.buildapi"
 
 [tool.uv]
 exclude-newer = "21 days"
